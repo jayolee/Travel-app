@@ -5,7 +5,6 @@ import React, { Component } from 'react';
 class ImageView extends Component {
   constructor(props) {
     super(props);
-
       this.chichuImgInfo=[{
       artist: "Walter De Maria",
       title: "Time/Timeless/No Time, 2004",
@@ -53,8 +52,8 @@ class ImageView extends Component {
       url:"https://www.flickr.com/photos/johsgrd/14507211785/",
     },
     {
-      artist: " ",
-      title: "Benesse House",
+      artist: "Benesse House",
+      title: "",
       url:"https://www.flickr.com/photos/garrettziegler/28063943698/",
     },
     {
@@ -86,27 +85,27 @@ class ImageView extends Component {
     },
     ];
     this.ieImgInfo=[{
-      artist: " ",
+      artist: "Art House Project",
       title: "Haisha",
       url:"https://www.flickr.com/photos/shingo/8337170167/",
     },
     {
-      artist: " ",
+      artist: "Art House Project",
       title: "Inside of Haisha",
       url:"https://www.flickr.com/photos/hakodx/436469300/",
     },
     {
-      artist: " ",
-      title: "Honmura District",
+      artist: "Honmura District",
+      title: "Street of Honmura",
       url:"https://www.flickr.com/photos/atsushi-nishio/2846950271/",
     },
     {
-      artist: " ",
-      title: "Honmura District",
+      artist: "Honmura District",
+      title: "Wall Art",
       url:"https://www.flickr.com/photos/garrettziegler/41935421061/",
     },
     {
-      artist: " ",
+      artist: "Honmura District",
       title: "Ando Museum",
       url:"https://www.flickr.com/photos/chinnian/11562974103/",
     },
@@ -118,77 +117,126 @@ class ImageView extends Component {
     ];
     this.redpumpInfo=[{
       artist: "Yayoi Kusama",
-      title: "Red Pumpkin, 1998",
+      title: "Red Pumpkin, 1994",
       url:"https://www.flickr.com/photos/bryansjs/29998198135/",
     },
+    {
+      artist: "Yayoi Kusama",
+      title: "Red Pumpkin, 1994",
+      url:"https://www.flickr.com/photos/sergejf/36561263811//",
+    },
     ];
-  
+    this.kabochaImgInfo=[{
+      artist: "Yayoi Kusama",
+      title: "Kabocha(Yellow Pumpkin), 1994",
+      url:"https://www.flickr.com/photos/tagchan_stream/8709620467/",
+
+    },
+    {
+      artist: "Yayoi Kusama",
+      title: "Kabocha(Yellow Pumpkin), 1994",
+      url:"https://www.flickr.com/photos/cotaro70s/10284060785/in/photolist-gELuYR-7r7KaY-7oZ4WR-ycDX2-e3tu88-ycDXb-9mVtBa-4ZaeqE-9mYxg5-9FWW3F-GHJrS7-7nAigX-gELoFm-XGN2Xr-AHx9Cg-GHJtpA-Bm4ZM6-5YMPju-5YHzvP-4CibYY-5YN2qo-6HLTTJ-5uVExL-7oHRyq-5YMP2w-5VzK9H-H7jxp-ahSmfR-5YHxQX-qddRn7-5YMMwJ-5YMJaQ-H7jDT-7oHRGC-BMiiXv-5EWiZf-w3Rdj2-7r3QFg-6Ksco6-e3zafo-5YHMGZ-e3ttZx-5VzJXv-8tsu4q-8tsu4d-8U75Md-8tsu47-6KwjFL-bJGiUi-XGNbKr",
+
+    }]
+    this.infolist=[this.chichuImgInfo, this.benesseImgInfo, this.leeUfanImgInfo, this.ieImgInfo, this.redpumpInfo, this.kabochaImgInfo];
     this.state={
       currentNum : this.props.imgorder,
   }
 }
 
+
   renderImg(){
-    return <div class="imgwrapper_zoom"> <img src={this.props.imgsrc} /> </div>
+    var id= this.props.idnum[this.props.iddata];
+    var idorder=this.state.currentNum;
+    return <div className="imgwrapper_zoom"> <img src={this.props.imglist[id][idorder]} /> </div>
    
   }
 
 
   renderDetail(){
-    var element=[]
-    var curtitle=this.props.title
-    var ordernum=this.props.imgorder-1
-    if (curtitle=='redpumpkin_d'){
-element.push(<div className="detail_infowrap">
-    
-    <div className="imgdes"><b>Yayoi Kusama</b><br />
-      <i>Red Pumpkin</i> 2004</div>
-      <a href={this.redpumpInfo[0].url} target="_blank">
-    <div className="imgsource">Image Source</div> 
-    </a>
-    
-   </div>)}
-   else if(curtitle=='leeUfan'){
+
+    var id= this.props.idnum[this.props.iddata];
+    var element=[];
+    var idorder=this.state.currentNum;
+
     element.push(<div className="detail_infowrap">
-    
-    <div className="imgdes"><b>{this.leeUfanImgInfo[ordernum].artist}</b><br />
-      <i>{this.leeUfanImgInfo[ordernum].title}</i></div>
-      <a href={this.leeUfanImgInfo[ordernum].url} target="_blank">
+    <div className="imgdes"><b>{this.infolist[id][idorder].artist}</b><br />
+      <i>{this.infolist[id][idorder].title}</i></div>
+      <a href={this.infolist[id][idorder].url} target="_blank">
     <div className="imgsource">Image Source</div> 
     </a>
-    </div>)
-   }
+   </div>)
+   
 return(element)
   }
 
-  minusCurrentNum(){
-    this.state.currentNum += 1;
-  }
-  addCurrentNum(){
-    this.state.currentNum += 1;
-  }
-  render() {
 
-    return (
-      
-    <div >
-    <div className="Xmark" onClick = {this.props.onBack}>
-    
-      <svg className="icon" height="40" width="30">
-        <path d="M30 0 L10 20 L30 40" fill="none" stroke="rgba(0,0,0,.5)" stroke-width="3"/>
-      </svg>
-    </div>
-    <div className="detail_wrapper" >
-      <svg className="icon" height="60" width="26" onClick = {this.minusCurrentNum()}>
-        <path d="M26 5 L12 30 L26 60" fill="none" stroke="rgba(0,0,0,.5)" stroke-width="3"/>
+
+  renderArrows(){
+    var id= this.props.idnum[this.props.iddata];
+    var element=[];
+    var idorder=this.state.currentNum;
+
+    if (idorder == 0){
+      element.push(
+      <div className="detail_wrapper" >
+      <svg className="icon" height="60" width="26" >
+        <path d="M26 5 L12 30 L26 60" fill="none" opacity="0" stroke-width="3"/>
       </svg>
     
     {this.renderImg()}
       
-      <svg className="icon right" height="60" width="26" onClick = {this.addCurrentNum()}>
-        <path d="M26 5 L12 30 L26 60" fill="none" stroke="rgba(0,0,0,.5)" stroke-width="3"/>
+      <svg className="icon right" height="60" width="26" onClick = {(ev) => {this.setState({currentNum: this.state.currentNum+1}); }}>
+        <path d="M26 5 L12 30 L26 60" fill="none" stroke-width="3"/>
       </svg>
     </div>
+    )
+    }
+    else if(idorder == this.infolist[id].length-1){
+      element.push(
+      <div className="detail_wrapper" >
+      <svg className="icon" height="60" width="26" onClick = {(ev) => this.setState({currentNum: this.state.currentNum-1})}>
+        <path d="M26 5 L12 30 L26 60" fill="none" stroke-width="3"/>
+      </svg>
+    
+    {this.renderImg()}
+      
+      <svg className="icon right" height="60" width="26" >
+        <path d="M26 5 L12 30 L26 60" fill="none" opacity="0" stroke-width="3"/>
+      </svg>
+    </div>
+    )}
+    else{
+      element.push(
+      <div className="detail_wrapper" >
+      <svg className="icon" height="60" width="26" onClick = {(ev) => this.setState({currentNum: this.state.currentNum-1})}>
+        <path d="M26 5 L12 30 L26 60" fill="none" stroke-width="3"/>
+      </svg>
+    
+        {this.renderImg()}
+      
+      <svg className="icon right" height="60" width="26" onClick = {(ev) => this.setState({currentNum: this.state.currentNum+1})}>
+        <path d="M26 5 L12 30 L26 60" fill="none"  stroke-width="3"/>
+      </svg>
+    </div>
+    )
+    }
+    return element;
+  }
+  
+  render(){
+
+    return (
+      
+    <div >
+      
+    <div className="Xmark" onClick = {this.props.onBack}>
+    
+      <svg className="icon" height="50" width="30">
+        <path d="M30 10 L10 30 L30 50" fill="none" stroke="#797979" stroke-width="3"/>
+      </svg>
+    </div>
+    {this.renderArrows()}
   {this.renderDetail()}
     
     <div className="dashline_main">

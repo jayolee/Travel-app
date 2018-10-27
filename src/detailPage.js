@@ -55,31 +55,31 @@ class DetailView extends Component {
     this.leeUfanImgs=[leeUfan0, leeUfan1, leeUfan2, leeUfan3];
     this.leeUfanInfo={
       title: "Lee Ufan Museum",
-      detail: "Benesse House is both a museum and a hotel displaying contemporary art. Guests can closely interact with contemporary art at Benesse House. The museum utilize the space artistic way. The building is designed by Tadao Ando.",
+      detail: "Lee Ufan Museum is a museum of a collaboration of world famous artist Lee Ufan and architecture Tadao Ando. The building and Lee's artworks give the impression of stillness and dynamism, as make viewers feel that they are part of mother nature.",
       url: "http://benesse-artsite.jp/en/art/lee-ufan.html",
       img: this.props.mainImgs[2]
     };
     this.ieImgs=[ie0, ie1, ie2, ie3, ie4, ie5];
     this.ieInfo={
       title: "Art House Project",
-      detail: "Benesse House is both a museum and a hotel displaying contemporary art. Guests can closely interact with contemporary art at Benesse House. The museum utilize the space artistic way. The building is designed by Tadao Ando.",
+      detail: "Art House Project is a project in Honmura District. Artists turned seven empty houses into art pieces. Visitors can feel and interact with various artworks in diverse formats and shapes as they walk through the district.",
       url: "http://benesse-artsite.jp/en/art/arthouse.html",
       img: this.props.mainImgs[3]
     };
     this.redpumkImgs=[redpumk0, redpumk1];
     this.redpumkInfo={
       title: "Red Pumpkin",
-      detail: "Benesse House is both a museum and a hotel displaying contemporary art. Guests can closely interact with contemporary art at Benesse House. The museum utilize the space artistic way. The building is designed by Tadao Ando.",
+      detail: "Red Pumpkin (Akakabocha) is another pumpkin installation from Kusama Yayoi in Naoshima Island. Unlike Yellow Pumpkin, people can go inside and interact with the installation.",
       artist: "Kusama Yayoi",
-      url: "http://benesse-artsite.jp/en/art/benessehouse-museum.html",
+      url: "https://www.tokyocreative.com/sights/6916-akakabocha-red-pumpkin",
       img: this.props.mainImgs[0]
     };
     this.kabochaImgs=[kabocha0, kabocha1];
     this.kabochaInfo={
-      title: "Kabocha",
-      detail: "Yayoi Kusama's Kabocha (Yellow Pumpkin) is the icon of Naoshima island. Once, it was carried by flood, but now it's back on the dock facing Benesse House.",
+      title: "Yellow Pumpkin",
+      detail: "Yayoi Kusama's Yellow Pumpkin (Kabocha) is the pop art icon of Naoshima island. Once, it was carried by flood, but now it's back on the dock facing Benesse House.",
       artist: "Kusama Yayoi",
-      url: "http://benesse-artsite.jp/en/art/benessehouse-museum.html",
+      url: "https://wild-about-travel.com/naoshima-pop-art-yayoi-kusama-yellow-pumpkin/",
       img: this.props.mainImgs[1]
     };
     this.imglist=[this.chichuImgs, this.benesseImgs,this.leeUfanImgs, this.ieImgs, this.redpumkImgs, this.kabochaImgs];
@@ -97,6 +97,8 @@ class DetailView extends Component {
     this.state={
       detailview: null,
       imgsrc:null,
+      orderImg:null,
+      idorderdata:null,
   }
 
   }
@@ -105,7 +107,7 @@ renderscreen(){
   if(this.state.detailview !== null){
 
     element.push(<div className="details" id="DetailView" >
-        <ImageView onBack={this.backhandler.bind(this)} imgorder={this.state.pagenum} imgsrc={this.state.imgsrc} infolist={this.infolist} imglist={this.imglist} idnum={this.idorder} />
+        <ImageView onBack={this.backhandler.bind(this)} imgorder={this.state.orderImg} imgsrc={this.state.imgsrc} infolist={this.infolist} imglist={this.imglist} idnum={this.idorder} iddata={this.state.idorderdata}/>
       </div>)
         return(element)
   }
@@ -134,9 +136,11 @@ renderImgs(){
   var idnum=this.idorder[id];
 
 for (var i=0; i<this.imglist[idnum].length; i++){
-      var k=this.imglist[idnum][i];
-        element.push(<div className="imgwrapper"  > 
-                    <img src={this.imglist[idnum][i]}  onClick = {(ev) => this.setState({detailview : 1, imgsrc:k})} onBack={this.backhandler.bind(this)}/>
+      let k=this.imglist[idnum][i];
+      let m =i;
+      let l = id;
+        element.push(<div className="imgwrapper" > 
+                    <img src={this.imglist[idnum][i]}  onClick = {(ev) => {this.setState({detailview : 1, imgsrc:k, orderImg:m, idorderdata:l}); this.gototop()}} onBack={this.backhandler.bind(this)}/>
                      </div>
                      )
         }
@@ -158,7 +162,11 @@ renderBotTitle(){
   }
   return(element)
 }
+gototop(){
+  var pos= document.getElementsByClassName("App").offsetTop;
+  window.scroll(0.3,pos);
 
+}
 renderTop(){
 
   let id = this.props.id;
@@ -169,7 +177,7 @@ renderTop(){
   element.push(
         <div className="details_top">
            <div className="Xmark" onClick = {this.props.onClose} >X</div>
-          <div className="detail_img"> <img src={this.infolist[idnum].img} /></div>
+          <div className="detail_img"> <img src={this.infolist[idnum].img} alt={this.infolist[idnum].title} /></div>
           <div className="detail_paragraph" >
             <div className="detail_title" >{this.infolist[idnum].title}</div>
             <div className = "artist">Artist: {this.infolist[idnum].artist}</div>
@@ -185,7 +193,7 @@ renderTop(){
       element.push(
         <div className="details_top">
            <div className="Xmark" onClick = {this.props.onClose} >X</div>
-          <div className="detail_img"> <img src={this.infolist[idnum].img} /></div>
+          <div className="detail_img"> <img src={this.infolist[idnum].img} alt={this.infolist[idnum].title}  /></div>
           <div className="detail_paragraph" >
             <div className="detail_title" >{this.infolist[idnum].title}</div>
             {this.infolist[idnum].detail}
@@ -205,6 +213,7 @@ renderTop(){
   render(){
 
     return (<div>
+      <div class="detailWrapper" />
       {this.renderscreen()}
       </div>
     );
