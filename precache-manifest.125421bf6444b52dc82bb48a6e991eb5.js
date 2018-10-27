@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "cdf655dbe77510e9b68ad5049b6cca51",
-    "url": "/Travel-app/static/media/leeUfan_0.cdf655db.jpg"
+    "revision": "fea7e198d9e4d24cb3217bca7d40b0e6",
+    "url": "/Travel-app/static/media/ie_0.fea7e198.jpg"
   },
   {
-    "revision": "88a6774f2dd0bc21f9d3",
-    "url": "/Travel-app/static/css/main.7d09382c.chunk.css"
+    "revision": "47abd2d217084ec0e895",
+    "url": "/Travel-app/static/css/main.dac0b22d.chunk.css"
   },
   {
-    "revision": "a786f43f2678604896b7",
-    "url": "/Travel-app/static/js/1.a786f43f.chunk.js"
+    "revision": "a83c63f08b863b0cd57b",
+    "url": "/Travel-app/static/js/1.a83c63f0.chunk.js"
   },
   {
     "revision": "5c563fc4174146c53d20",
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/Travel-app/static/media/pin.c8468d86.png"
   },
   {
-    "revision": "db07efa7070632f9b30d1eda94b67cc6",
-    "url": "/Travel-app/static/media/kabocha.db07efa7.png"
+    "revision": "2d01aa0f1774752b2746f2b7a2092fe1",
+    "url": "/Travel-app/static/media/about.2d01aa0f.png"
   },
   {
     "revision": "4c52ab3fbe06a94c1558cc65f1bc0bc5",
@@ -76,8 +76,8 @@ self.__precacheManifest = [
     "url": "/Travel-app/static/media/benesse_4.193ed9a5.jpg"
   },
   {
-    "revision": "88a6774f2dd0bc21f9d3",
-    "url": "/Travel-app/static/js/main.88a6774f.chunk.js"
+    "revision": "cdf655dbe77510e9b68ad5049b6cca51",
+    "url": "/Travel-app/static/media/leeUfan_0.cdf655db.jpg"
   },
   {
     "revision": "28c409cbb7142c1cdbdee7bdf6da2708",
@@ -92,8 +92,8 @@ self.__precacheManifest = [
     "url": "/Travel-app/static/media/leeUfan_4.dd50ef3e.jpg"
   },
   {
-    "revision": "fea7e198d9e4d24cb3217bca7d40b0e6",
-    "url": "/Travel-app/static/media/ie_0.fea7e198.jpg"
+    "revision": "47abd2d217084ec0e895",
+    "url": "/Travel-app/static/js/main.47abd2d2.chunk.js"
   },
   {
     "revision": "9721ee2d448a26b52047a959d81c5a88",
@@ -132,6 +132,10 @@ self.__precacheManifest = [
     "url": "/Travel-app/static/media/redpumpkin.4e2a6f1e.png"
   },
   {
+    "revision": "db07efa7070632f9b30d1eda94b67cc6",
+    "url": "/Travel-app/static/media/kabocha.db07efa7.png"
+  },
+  {
     "revision": "29d47e4b94315cab46bc263c35a51f77",
     "url": "/Travel-app/static/media/leeufan.29d47e4b.png"
   },
@@ -152,7 +156,31 @@ self.__precacheManifest = [
     "url": "/Travel-app/static/media/logo.b0e0828b.svg"
   },
   {
-    "revision": "95ca4f12843b489232981c477e4b1459",
+    "revision": "cb175dcb3d05c799adb40a4befaea11b",
+    "url": "/Travel-app/static/media/kabochasmall.cb175dcb.png"
+  },
+  {
+    "revision": "afeab9bbcf6e16c8ff811c41f2d60204",
+    "url": "/Travel-app/static/media/redpumpkinsmal.afeab9bb.png"
+  },
+  {
+    "revision": "7c4b2ebde0694ec41972c83629dc2fd0",
+    "url": "/Travel-app/static/media/leeufansmall.7c4b2ebd.png"
+  },
+  {
+    "revision": "e12b44d3ed62115baad8bc36f3bd575e",
+    "url": "/Travel-app/static/media/chichusmall.e12b44d3.png"
+  },
+  {
+    "revision": "77008f1e8ee46d4d592aad193a8dda6c",
+    "url": "/Travel-app/static/media/benessesmall.77008f1e.png"
+  },
+  {
+    "revision": "4ce8f41d431d5775cd25e84425170049",
+    "url": "/Travel-app/static/media/iesmall.4ce8f41d.png"
+  },
+  {
+    "revision": "f8a982a6f758f928cf49db1c40f897b4",
     "url": "/Travel-app/index.html"
   }
 ];
