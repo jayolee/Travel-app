@@ -53,12 +53,12 @@ class ImageView extends Component {
     },
     {
       artist: "Benesse House",
-      title: "",
+      title: "Inside of Benesse House",
       url:"https://www.flickr.com/photos/garrettziegler/28063943698/",
     },
     {
       artist: "Yanagi Yukinori",
-      title: "Banzai Corner",
+      title: "Banzai Corner, 1991",
       url:"https://www.flickr.com/photos/garrettziegler/28063954908/",
     },
   

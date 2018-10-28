@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700');
 body {
   margin: 0;
   padding: 0;
@@ -74,7 +75,7 @@ a {
   background-color: #C69333;
 }
 .about:hover {
-  transform: translateY(4px);
+  top:0px;
   background-color: #E5B354;
 }
 .main {
@@ -162,8 +163,8 @@ a {
 .title {
   width: 260px;
   position: absolute;
-  right: 0;
-  top: -60px;
+  right: -20px;
+  top: -80px;
   font-weight: 300;
   line-height: 1.5;
   font-style: italic;
@@ -200,9 +201,7 @@ a {
   cursor:pointer;
 }
 .reverse:hover {
-  transform: translateY(-4px);
-  -webkit-transform: translateY(-4px);
-  -ms-transform:translateY(-4px);
+  top:-4px;
 
 }
 .about-wrap{
@@ -210,6 +209,7 @@ a {
   max-width:1000px;
   top:0;
   left:50%;
+  transition:.6s;
   transform:translateX(-50%);
   position:absolute;
   animation:slidedown .8s ease-in-out;
@@ -224,6 +224,15 @@ a {
     transform:translateX(-50%) translateY(0);
   }
 }
+
+@keyframes appear{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+  }
 .about-roll {
   width: 100%;
   background-color: #fff;
@@ -300,7 +309,7 @@ a {
   width:100%;
   height:100%;
   top:0;
-
+  animation:appear .3s ease-in-out;
   position:fixed;
   background:rgba(0,0,0,0.5);
 }
@@ -319,6 +328,7 @@ a {
   border-top: 0px;
   text-align: center;
   margin-bottom: 80px;
+    animation:appear .3s ease-in-out;
 }
 .details_top {
   display: flex;
@@ -498,6 +508,7 @@ a {
   }
   .btn{
     font-size:16px;
+    cursor: pointer;
   }
   .about-roll{
     border:8px solid #E5B354;

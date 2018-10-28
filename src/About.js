@@ -3,7 +3,15 @@ import aboutImg from './images/about.png';
 class About extends Component {
   constructor(props) {
     super(props);
-  }
+	}
+	
+	rollup(){
+		let aboutdiv=document.getElementsByClassName("about-wrap")[0];
+
+		aboutdiv.style.transform="translateX(-50%) translateY(-100%)";
+		setTimeout(function(){this.props.onClose(); this.props.getagain();}.bind(this),550)
+	}
+
 	
 	render(){
 		return(<div>
@@ -18,14 +26,14 @@ class About extends Component {
       				<div className="about_paragraph" >
       				This is a project of a class: <i>Software Structures for User Interfaces.</i>
       				<br />This website is created to introduce a meaningful location for myself.
-      				The site introduces six different sculptures or art museums of Naoshima Island. 
+      				The site introduces six different installations or art museums of Naoshima Island. 
       				The site is made of React. Feel free to leave feedback.<br />
        				 <b><span>Thank you!</span></b>
-        				<div className="btn">Leave Feedback</div>
+        			
       				</div>
    				 </div>
   			</div>
-				<div className="about btn reverse" onClick = {(ev) => {this.props.onClose(); this.props.getagain()}}> 
+				<div className="about btn reverse" onClick = {(ev) => {this.rollup()}}> 
 				ABOUT
    				<div className="dashline" />
   			</div>

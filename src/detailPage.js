@@ -140,7 +140,7 @@ for (var i=0; i<this.imglist[idnum].length; i++){
       let m =i;
       let l = id;
         element.push(<div className="imgwrapper" > 
-                    <img src={this.imglist[idnum][i]}  onClick = {(ev) => {this.setState({detailview : 1, imgsrc:k, orderImg:m, idorderdata:l}); this.gototop()}} onBack={this.backhandler.bind(this)}/>
+                    <img src={this.imglist[idnum][i]}  onClick = {(ev) => {this.setState({ imgsrc:k, orderImg:m, idorderdata:l}); this.gototop()}} onBack={this.backhandler.bind(this)}/>
                      </div>
                      )
         }
@@ -163,10 +163,10 @@ renderBotTitle(){
   return(element)
 }
 gototop(){
-  var pos= document.getElementsByClassName("App").offsetTop;
-  window.scroll(0.3,pos);
-
+  setInterval(window.scroll(0, 0), 16.66);
+  this.setState({detailview : 1})
 }
+
 renderTop(){
 
   let id = this.props.id;
