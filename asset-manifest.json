@@ -1,7 +1,7 @@
 {
-  "main.css": "/Travel-app/static/css/main.fabdc2d5.chunk.css",
-  "main.js": "/Travel-app/static/js/main.85a20576.chunk.js",
-  "main.js.map": "/Travel-app/static/js/main.85a20576.chunk.js.map",
+  "main.css": "/Travel-app/static/css/main.1cf015d5.chunk.css",
+  "main.js": "/Travel-app/static/js/main.718f2b26.chunk.js",
+  "main.js.map": "/Travel-app/static/js/main.718f2b26.chunk.js.map",
   "static/js/1.a83c63f0.chunk.js": "/Travel-app/static/js/1.a83c63f0.chunk.js",
   "static/js/1.a83c63f0.chunk.js.map": "/Travel-app/static/js/1.a83c63f0.chunk.js.map",
   "runtime~main.js": "/Travel-app/static/js/runtime~main.5c563fc4.js",
@@ -47,8 +47,8 @@
   "static/media/chichusmall.png": "/Travel-app/static/media/chichusmall.e12b44d3.png",
   "static/media/benessesmall.png": "/Travel-app/static/media/benessesmall.77008f1e.png",
   "static/media/iesmall.png": "/Travel-app/static/media/iesmall.4ce8f41d.png",
-  "static/css/main.fabdc2d5.chunk.css.map": "/Travel-app/static/css/main.fabdc2d5.chunk.css.map",
+  "static/css/main.1cf015d5.chunk.css.map": "/Travel-app/static/css/main.1cf015d5.chunk.css.map",
   "index.html": "/Travel-app/index.html",
-  "precache-manifest.1ac95610cdce168d557489744b10c3da.js": "/Travel-app/precache-manifest.1ac95610cdce168d557489744b10c3da.js",
+  "precache-manifest.43b6a9cc0f6aca38520668c0bf57b4e9.js": "/Travel-app/precache-manifest.43b6a9cc0f6aca38520668c0bf57b4e9.js",
   "service-worker.js": "/Travel-app/service-worker.js"
 }

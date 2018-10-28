@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/Travel-app/static/media/ie_0.fea7e198.jpg"
   },
   {
-    "revision": "85a20576c719c78a6849",
-    "url": "/Travel-app/static/css/main.fabdc2d5.chunk.css"
+    "revision": "718f2b265ae6dc960cca",
+    "url": "/Travel-app/static/css/main.1cf015d5.chunk.css"
   },
   {
     "revision": "a83c63f08b863b0cd57b",
@@ -92,8 +92,8 @@ self.__precacheManifest = [
     "url": "/Travel-app/static/media/leeUfan_4.dd50ef3e.jpg"
   },
   {
-    "revision": "85a20576c719c78a6849",
-    "url": "/Travel-app/static/js/main.85a20576.chunk.js"
+    "revision": "718f2b265ae6dc960cca",
+    "url": "/Travel-app/static/js/main.718f2b26.chunk.js"
   },
   {
     "revision": "9721ee2d448a26b52047a959d81c5a88",
@@ -180,7 +180,7 @@ self.__precacheManifest = [
     "url": "/Travel-app/static/media/iesmall.4ce8f41d.png"
   },
   {
-    "revision": "aaa85e25ef601b0a044fff63b28e83d2",
+    "revision": "44a51f7519dc50cbc639cd3c794cb655",
     "url": "/Travel-app/index.html"
   }
 ];
