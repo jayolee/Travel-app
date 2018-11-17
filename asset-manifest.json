@@ -1,7 +1,7 @@
 {
-  "main.css": "/Travel-app/static/css/main.1cf015d5.chunk.css",
-  "main.js": "/Travel-app/static/js/main.718f2b26.chunk.js",
-  "main.js.map": "/Travel-app/static/js/main.718f2b26.chunk.js.map",
+  "main.css": "/Travel-app/static/css/main.492213c7.chunk.css",
+  "main.js": "/Travel-app/static/js/main.f34332f3.chunk.js",
+  "main.js.map": "/Travel-app/static/js/main.f34332f3.chunk.js.map",
   "static/js/1.a83c63f0.chunk.js": "/Travel-app/static/js/1.a83c63f0.chunk.js",
   "static/js/1.a83c63f0.chunk.js.map": "/Travel-app/static/js/1.a83c63f0.chunk.js.map",
   "runtime~main.js": "/Travel-app/static/js/runtime~main.5c563fc4.js",
@@ -32,7 +32,7 @@
   "static/media/ie_4.jpg": "/Travel-app/static/media/ie_4.f534b702.jpg",
   "static/media/ie_5.jpg": "/Travel-app/static/media/ie_5.8ac43f6b.jpg",
   "static/media/kabocha_0.jpg": "/Travel-app/static/media/kabocha_0.9cf93fd7.jpg",
-  "static/media/about.png": "/Travel-app/static/media/about.2d01aa0f.png",
+  "static/media/about.png": "/Travel-app/static/media/about.cb0f2386.png",
   "static/media/map.png": "/Travel-app/static/media/map.6a47e951.png",
   "static/media/redpumpkin.png": "/Travel-app/static/media/redpumpkin.4e2a6f1e.png",
   "static/media/kabocha.png": "/Travel-app/static/media/kabocha.db07efa7.png",
@@ -47,8 +47,8 @@
   "static/media/chichusmall.png": "/Travel-app/static/media/chichusmall.e12b44d3.png",
   "static/media/benessesmall.png": "/Travel-app/static/media/benessesmall.77008f1e.png",
   "static/media/iesmall.png": "/Travel-app/static/media/iesmall.4ce8f41d.png",
-  "static/css/main.1cf015d5.chunk.css.map": "/Travel-app/static/css/main.1cf015d5.chunk.css.map",
+  "static/css/main.492213c7.chunk.css.map": "/Travel-app/static/css/main.492213c7.chunk.css.map",
   "index.html": "/Travel-app/index.html",
-  "precache-manifest.43b6a9cc0f6aca38520668c0bf57b4e9.js": "/Travel-app/precache-manifest.43b6a9cc0f6aca38520668c0bf57b4e9.js",
+  "precache-manifest.faddd7e95824492cbca2355e897fdd60.js": "/Travel-app/precache-manifest.faddd7e95824492cbca2355e897fdd60.js",
   "service-worker.js": "/Travel-app/service-worker.js"
 }
